@@ -12,18 +12,18 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void OnValoresRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
+    public void OnValoresRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
     {
         if(v3.IsChecked== true) {
-            mensaje.Text = $"Usted ha seleccionado una recarga de {t3.Value} dolares";
+            mensaje.Text = $"Usted ha seleccionado una recarga de {v3.Value} dolares";
         }
         if (v5.IsChecked == true)
         {
-            mensaje.Text = $"Usted ha seleccionado una recarga de {t5.Value} dolares";
+            mensaje.Text = $"Usted ha seleccionado una recarga de {v5.Value} dolares";
         }
         if (v10.IsChecked == true)
         {
-            mensaje.Text = $"Usted ha seleccionado una recarga de {t10.Value} dolares";
+            mensaje.Text = $"Usted ha seleccionado una recarga de {v10.Value} dolares";
         }
 
     }

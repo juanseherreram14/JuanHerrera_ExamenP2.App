@@ -37,9 +37,9 @@
 
             <StackLayout RadioButtonGroup.GroupName="valores" >
                 <Label Text="Seleccione Cuanto desea recargar" />
-                <RadioButton x:Name="t3" Content="3" CheckedChanged="OnValoresRadioButtonCheckedChanged" />
-                <RadioButton x:Name="t5" Content="5" CheckedChanged="OnValoresRadioButtonCheckedChanged" />
-                <RadioButton x:Name="t10" Content="10" CheckedChanged="OnValoresRadioButtonCheckedChanged"/>
+                <RadioButton x:Name="v3" Content ="3" Value="3" CheckedChanged="OnValoresRadioButtonCheckedChanged" />
+                <RadioButton x:Name="v5" Content ="5" Value="5" CheckedChanged="OnValoresRadioButtonCheckedChanged" />
+                <RadioButton x:Name="v10" Content ="10" Value="10" CheckedChanged="OnValoresRadioButtonCheckedChanged"/>
             </StackLayout>
             
             <Label
