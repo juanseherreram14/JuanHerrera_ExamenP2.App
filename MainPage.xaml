@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
              x:Class="JuanHerrera_ExamenP2.MainPage">
 
     <ScrollView>
@@ -17,13 +18,33 @@
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+            <Entry x:Name="entrada"
+             Placeholder="Ingrese el numero"
+            ClearButtonVisibility="WhileEditing" />
 
+            <Picker x:Name="picker"
+            Title="Seleccione un operador movil">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Movistar</x:String>
+                        <x:String>Claro</x:String>
+                        <x:String>CNT</x:String>
+                        <x:String>Tuenti</x:String>
+
+                </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            
+            <StackLayout>
+                <Label Text="Seleccione Cuanto desea recargar" />
+                <RadioButton Content="1" />
+                <RadioButton Content="2" />
+                <RadioButton Content="3" />
+                <RadioButton Content="4" />
+                <RadioButton Content="5"
+                 IsChecked="true" />
+            </StackLayout>
+            
             <Button
                 x:Name="CounterBtn"
                 Text="Click me"
