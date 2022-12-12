@@ -34,22 +34,28 @@
                 </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-            
-            <StackLayout>
+
+            <StackLayout RadioButtonGroup.GroupName="valores" >
                 <Label Text="Seleccione Cuanto desea recargar" />
-                <RadioButton Content="1" />
-                <RadioButton Content="2" />
-                <RadioButton Content="3" />
-                <RadioButton Content="4" />
-                <RadioButton Content="5"
+                <RadioButton Content="1" CheckedChanged="OnValoresRadioButtonCheckedChanged" />
+                <RadioButton Content="2" CheckedChanged="OnValoresRadioButtonCheckedChanged" />
+                <RadioButton Content="3" CheckedChanged="OnValoresRadioButtonCheckedChanged" />
+                <RadioButton Content="4" CheckedChanged="OnValoresRadioButtonCheckedChanged" />
+                <RadioButton Content="5" CheckedChanged="OnValoresRadioButtonCheckedChanged" 
                  IsChecked="true" />
             </StackLayout>
             
+            <Label
+                x:Name="mensaje"
+                Text="Desea hacer una recarga de" 
+                FontSize="10"
+                HorizontalOptions="Center" />
+            
             <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                x:Name="EnviarBtn"
+                Text="Enviar Recarga"
+                SemanticProperties.Hint="Envia la recarga"
+                Clicked="OnButtonClicked"
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>

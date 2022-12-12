@@ -1,4 +1,6 @@
-﻿namespace JuanHerrera_ExamenP2;
+﻿using System.Diagnostics;
+
+namespace JuanHerrera_ExamenP2;
 
 public partial class MainPage : ContentPage
 {
@@ -9,16 +11,18 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+    void OnValoresRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
+    {
+        Label label = new Label { Text = "Usted ha ecogido una recarga de " + e.ToString() + " dolares"};
+    }
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+    private async void OnButtonClicked(object sender, EventArgs e)
+    {
+        bool answer = await DisplayAlert("Confirmacion", "Desea Hacer la recarga?", "Si", "No");
+        if (answer)
+        {
+            await DisplayAlert("Confirmado", "Tu recarga ha sido exitosa", "OK");
+        }
+    }
 }
 
