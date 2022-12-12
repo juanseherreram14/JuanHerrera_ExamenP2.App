@@ -37,23 +37,20 @@
 
             <StackLayout RadioButtonGroup.GroupName="valores" >
                 <Label Text="Seleccione Cuanto desea recargar" />
-                <RadioButton Content="1" CheckedChanged="OnValoresRadioButtonCheckedChanged" />
-                <RadioButton Content="2" CheckedChanged="OnValoresRadioButtonCheckedChanged" />
-                <RadioButton Content="3" CheckedChanged="OnValoresRadioButtonCheckedChanged" />
-                <RadioButton Content="4" CheckedChanged="OnValoresRadioButtonCheckedChanged" />
-                <RadioButton Content="5" CheckedChanged="OnValoresRadioButtonCheckedChanged" 
-                 IsChecked="true" />
+                <RadioButton x:Name="t3" Content="3" CheckedChanged="OnValoresRadioButtonCheckedChanged" />
+                <RadioButton x:Name="t5" Content="5" CheckedChanged="OnValoresRadioButtonCheckedChanged" />
+                <RadioButton x:Name="t10" Content="10" CheckedChanged="OnValoresRadioButtonCheckedChanged"/>
             </StackLayout>
             
             <Label
                 x:Name="mensaje"
-                Text="Desea hacer una recarga de" 
+               
                 FontSize="10"
                 HorizontalOptions="Center" />
             
             <Button
                 x:Name="EnviarBtn"
-                Text="Enviar Recarga"
+                Text= "Enviar Recarga" 
                 SemanticProperties.Hint="Envia la recarga"
                 Clicked="OnButtonClicked"
                 HorizontalOptions="Center" />
